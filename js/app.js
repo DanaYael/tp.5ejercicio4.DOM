@@ -15,7 +15,7 @@ function obtenerfecha() {
     "Enero",
     "Febrero",
     "Marzo",
-    "Abirl",
+    "Abril",
     "Mayo",
     "Junio",
     "Julio",
@@ -26,22 +26,22 @@ function obtenerfecha() {
     "Diciembre",
   ];
 
-  console.log(diaSemana[fecha.getDay()]);
-  console.log(mes[fecha.getMonth()]);
-  console.log(fecha.getFullYear());
-
   const mifecha = `${diaSemana[fecha.getDay()]} ${fecha.getDate()} de ${
     mes[fecha.getMonth()]
   } ${fecha.getFullYear()} 🗓️`;
-  console.log(mifecha);
 
   const fechaTitulo = document.querySelector("h2");
-  const hora = document.querySelector("h3");
-  console.log(fechaTitulo);
+  const reloj = document.querySelector("h3");
 
   fechaTitulo.innerText = mifecha;
-  hora.innerText = `🕛${fecha.getHours()} : ${fecha.getMinutes()} : ${fecha.getMilliseconds()}`;
-  console.log(hora);
+
+  let hora = fecha.getHours();
+  const minutos = fecha.getMinutes().toString().padStart(2, "0");
+  const segundos = fecha.getSeconds().toString().padStart(2, "0");
+
+  const amPm = hora >= 12 ? "PM" : "AM";
+  hora = hora % 12 || 12; //;
+  reloj.innerText = `🕛 ${hora}:${minutos}:${segundos} ${amPm}`;
 }
 
 setInterval(obtenerfecha, 1000);
