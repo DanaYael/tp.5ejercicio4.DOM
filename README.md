@@ -31,8 +31,6 @@ Este proyecto es un **reloj dinámico** que muestra la fecha y la hora en tiempo
 
 Aquí tienes un ejemplo de README bien presentado y formateado para tu proyecto del reloj:
 
-markdown
-Copiar código
 
 # 🕒 Proyecto: **Reloj Digital**
 
@@ -68,6 +66,7 @@ Este proyecto es un **reloj dinámico** que muestra la fecha y la hora en tiempo
 ```javascript
 const mifecha = `${diaSemana[fecha.getDay()]} ${fecha.getDate()} de ${mes[fecha.getMonth()]} ${fecha.getFullYear()} 🗓️`;
 const hora = `${hour}:${minutes}:${seconds} ${amPm}`;
+
 📝 Cómo usarlo
 Clonar el proyecto:
 
@@ -88,6 +87,7 @@ Dominio del objeto Date para manipular fechas y horas.
 Uso de setInterval para tareas repetitivas en tiempo real.
 Implementación de diseño responsive con Bootstrap.
 Organización de archivos en un proyecto web: HTML, CSS y JS separados.
+
 ⚡ Próximos pasos
 Agregar funciones como cronómetro o temporizador.
 ```
